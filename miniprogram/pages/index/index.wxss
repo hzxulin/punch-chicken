@@ -1,0 +1,229 @@
+.container {
+    
+}
+.container-doc {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.map-container{
+    position: relative;
+    flex: 1;
+    width: 100%;
+}
+.map {
+    height: 100%;
+    width: 100%;
+}
+.share-area {
+    position: fixed;
+    right: 30rpx;
+    top: 200rpx;
+    width: 80rpx;
+    height: 80rpx;
+    background: #909090;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: .6;
+    z-index: 999;
+}
+.share-area .icon-share {
+    display: block;
+    width: 60rpx;
+    height: 60rpx;
+    margin: 10rpx auto;
+}
+.share-area .btn-share {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    z-index: 999;
+    font-size: 100rpx;
+    opacity: 0;
+}
+.btn-share::after {
+    border: 0;
+}
+.btn-share .icon-share {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.backLoc-btn {
+    position: absolute;
+    right: 30rpx;
+    bottom: 50rpx;
+    background: #fff;
+    width: 60rpx;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6rpx;
+    border: none;
+}
+.backLoc-img {
+    display: block;
+    width: 40rpx;
+    height: 40rpx;
+    opacity: .8;
+}
+.btn-info {
+    margin-top: 50rpx;
+    padding: 0 30rpx;
+}
+.ft-info {
+    margin-top: 20rpx;
+    margin-bottom: 40rpx;
+    /* height: 60rpx; */
+    padding: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.date-tip {
+    display: block;
+    text-align: left;
+    flex: 1;
+    color: #aaa;
+    font-size: 28rpx;
+    line-height: 32rpx;
+    padding-right: 10rpx;
+    justify-content: space-between;
+}
+.date-tip .date {
+    color: #666;
+    margin: 0 4rpx;
+}
+.date-tip .address {
+    color: #666;
+    margin: 0 4rpx;
+    text-decoration: underline;
+}
+.del-info {
+    display: block;
+    text-align: right;
+    white-space: nowrap;
+    width: 100rpx;
+    height: 50rpx;
+}
+.del-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5rpx;
+}
+.del-txt {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 28rpx;
+    color: #ccc;
+    line-height: 30rpx;
+}
+.pop-welcome {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3000;
+}
+.pop-welcome .modal {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: .65;
+}
+.welcome-container {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    width: 560rpx;
+    margin-left: -280rpx;
+    box-sizing: border-box;
+    border-radius: 10rpx;
+    background: #ffffff;
+    transform: translateY(-50%);
+}
+.welcome-content {
+    padding: 50rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-container .logo {
+    display: inline-block;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    border: 1rpx solid #efefef;
+    margin-right: 20rpx;
+}
+.welcome-container .detail {
+    flex: 1;
+    display: inline-block;
+}
+.welcome-container .detail .tlt {
+    color: #606060;  
+    margin-bottom: 20rpx;
+    font-size: 36rpx; 
+    line-height: 40rpx;
+}
+.welcome-container .detail .txt {
+    color: #909090;
+    font-size: 30rpx;
+    line-height: 36rpx;
+    text-align: justify;
+    white-space: normal;
+}
+.welcome-btn {
+    font-size: 32rpx;
+    color: #22ac19;
+    height: 90rpx;
+    line-height: 90rpx;
+}
+.pop-poster {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3000;
+}
+.pop-poster .modal {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: .65;
+}
+.poster-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.poster {
+    display: block;
+    width: 672rpx;
+    height: 896rpx;
+    border-radius: 20rpx;
+}
+.poster-txt {
+    position: relative;
+    font-size: 22rpx;
+    color: #cccccc;
+    text-align: center;
+    margin-top: 15rpx;
+}
+
+.canvas {
+    position: absolute;
+    top: -9999px;
+    left: 0;
+    z-index: 2000;
+    width: 768px;
+    height: 1024px;
+}

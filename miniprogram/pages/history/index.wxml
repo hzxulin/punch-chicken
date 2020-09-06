@@ -1,0 +1,40 @@
+<view class="container" catchtouchmove="{{disableScroll ? 'disableScroll' : ''}}">
+  <view wx:if="{{location.length}}">
+    <view class="history-list">
+      <view wx:for="{{location}}" wx:key="_id" class="history-item" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-id="{{item._id}}">
+        <view class="history-content" style="{{'left:' + (item._id === swipeOut.id ? swipeOut.x : 0) + 'rpx'}}">
+          <view class="history-line" style="{{'background:' + item.bgColor}}"></view>
+          <view class="history-del" bindtap="delLocation" data-index="{{index}}">
+            <image src="../../img/del.png" class="icon-del"></image>
+          </view>
+          <view class="history-info">
+            <view class="info-item">
+              <image src="../../img/icon-address.png" class="icon"></image>
+              <text selectable="true" class="text">{{item.address}}</text>
+            </view>
+            <view class="info-item">
+              <image src="../../img/icon-date.png" class="icon"></image>
+              <text class="text">{{item.formatDate}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="history-end">
+      <text class="tip">- 共 {{location.length}} 次打卡 -</text>
+    </view>
+  </view>
+
+  <view wx:elif="{{!loading}}">
+    <view class="history-tip">
+      <image src="../../img/face.png" class="icon"></image>
+      <text class="tip">暂无打卡记录</text>
+    </view>
+  </view>
+
+  <view wx:else>
+    <view class="history-end">
+      <text class="tip">加载中...</text>
+    </view>
+  </view>
+</view>

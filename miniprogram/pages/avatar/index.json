@@ -1,0 +1,7 @@
+{
+    "disableScroll": true,
+    "component": true,
+    "usingComponents": {
+        "action-sheet": "../../components/actionSheet/index"
+    }
+}

@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="map-container">
+    <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" scale="6" show-location="true" enable-rotate="true"></map>
+    <cover-view class="backLoc-btn" bindtap="backtap" wx-if="{{backBtnVisible}}">
+      <cover-image class="backLoc-img" src="../../img/back_loc.png"></cover-image>
+    </cover-view>
+    <cover-image class="sort-img" bindtap="sorttap" src="../../img/sort.png" bindtap="gotorank" style="{{'top:' + navBarHeight + 'px'}}"></cover-image>
+  </view>
+</view>

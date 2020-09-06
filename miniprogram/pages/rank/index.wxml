@@ -1,0 +1,37 @@
+<view class="container">
+  <image src="../../img/rank.jpg" class="rank-bg" style="{{'top:' + (statusHeight - 60)+ 'px'}}"></image>
+  <view class="rank-list-area" style="{{'padding-top:' + (navBarHeight + 130) + 'px'}}" wx:if="{{rankList.length}}">
+    <view class="rank-list">
+      <view class="rank-item" wx:for="{{rankList}}" wx:key="_openid">
+        <image src="../../img/top1.png" class="item-icon first" wx:if="{{index == 0}}"></image>
+        <image src="../../img/top2.png" class="item-icon second" wx:elif="{{index == 1}}"></image>
+        <image src="../../img/top3.png" class="item-icon" wx:elif="{{index == 2}}"></image>
+        <view class="item-icon" wx:else="{{index == 2}}">{{index + 1}}</view>
+        <image src="{{item.avatarUrl || '../../img/default_avatar.png'}}" class="item-avatar"></image>
+        <view class="item-name">{{item.nickName || "匿名用户"}}</view>
+        <view class="item-times">共打卡<text class="times">{{item.times}}</text>次</view>
+      </view>
+      <view class="rank-tip">
+        <text class="tip" wx:if="{{myRank}}">- 恭喜你在前top10，继续加油！-</text>
+        <text class="tip" wx:else>- 哎呀，列表中没找到你，继续加油！-</text>
+      </view>
+    </view>
+  </view>
+  
+  <view wx:elif="{{!loading}}" style="{{'padding-top:' + (navBarHeight + 130) + 'px'}}">
+    <view class="rank-empty">
+      <image src="../../img/face.png" class="icon"></image>
+      <text class="tip">暂无排行榜信息</text>
+    </view>
+  </view>
+
+  <view wx:else  style="{{'padding-top:' + (navBarHeight + 130) + 'px'}}">
+    <view class="rank-end">
+      <text class="tip">加载中...</text>
+    </view>
+  </view>
+
+  <cover-view class="back-btn-area" style="{{'top:'+ statusHeight + 'px'}}">
+    <cover-image src="../../img/back.png" class="back-btn" bindtap="backhome"></cover-image>
+  </cover-view>
+</view>
