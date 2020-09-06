@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/history/index",
+    "pages/world/index",
+    "pages/mime/index",
+    "pages/avatar/index",
+    "pages/upload/index",
+    "pages/rank/index"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "高级打卡鸡",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ddd"
+  },
+  "tabBar": {
+    "color": "#2f2f2f",
+    "selectedColor": "#e65e44",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "text": "打卡",
+        "iconPath": "img/index.png",
+        "selectedIconPath": "img/index_focus.png",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "记录",
+        "iconPath": "img/history.png",
+        "selectedIconPath": "img/history_focus.png",
+        "pagePath": "pages/history/index"
+      },
+      {
+        "text": "世界圈",
+        "iconPath": "img/world.png",
+        "selectedIconPath": "img/world_focus.png",
+        "pagePath": "pages/world/index"
+      },
+      {
+        "text": "我的",
+        "iconPath": "img/mime.png",
+        "selectedIconPath": "img/mime_focus.png",
+        "pagePath": "pages/mime/index"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

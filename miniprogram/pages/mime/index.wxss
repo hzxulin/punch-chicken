@@ -1,0 +1,81 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 40rpx 60rpx 20rpx;
+}
+
+.userinfo-avatar {
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 30rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.userinfo-avatar .avatar {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.weather {
+  margin: 30rpx 60rpx;
+  padding: 20rpx 30rpx;
+  background: #fefefe;
+  border: 1rpx solid #efefef;
+}
+.weather-line {
+  position: relative;
+  white-space: nowrap;
+  font-size: 32rpx;
+  line-height: 36rpx;
+  margin-bottom: 10rpx;
+}
+.line+.line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  border-top: 1rpx dashed #efefef;
+}
+.tlt {
+  display: inline-block;
+  vertical-align: top;
+  color: #333;
+}
+.desc {
+  color: #666;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  flex: 1;
+}
+.bmap {
+  margin: 30rpx 60rpx;
+}
+.map {
+  width: 100%;
+  height: 350rpx;
+  margin-bottom: 20rpx;
+}
+.bmap-line {
+  position: relative;
+  /* white-space: nowrap; */
+  font-size: 28rpx;
+  line-height: 30rpx;
+  margin-bottom: 6rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+}

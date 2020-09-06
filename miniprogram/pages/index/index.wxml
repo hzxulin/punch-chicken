@@ -1,0 +1,49 @@
+<view class="container">
+  <view class="container-doc">
+    <view class="map-container">
+      <map class="map" id="indexMap" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" polyline="{{polyline}}" scale="14" show-location="true"></map>
+      <cover-view class="share-area" style="{{'top:' + navBarHeight + 'px'}}">
+        <cover-image src="../../img/share.png" class="icon-share"></cover-image>
+        <button open-type="share" plain="true" class="btn-share">分享</button>
+      </cover-view>
+      <cover-view class="backLoc-btn" bindtap="backtap" wx-if="{{backBtnVisible}}">
+        <cover-image class="backLoc-img" src="../../img/back_loc.png"></cover-image>
+      </cover-view>
+    </view>
+    <view class="btn-info">
+      <button class="btn-save" type="primary" loading="{{loading}}" bindtap="saveLocation">打卡</button>
+    </view>
+    <view class="ft-info">
+      <view wx:if="{{punchAddress}}" bindtap="lookHistory" class="date-tip">最后于<text class="date">{{punchDate}}</text>在<text class="address">{{punchAddress}}</text>打卡</view>
+      <block wx:else>
+        <text class="date-tip">暂无打卡记录</text>
+      </block>
+      <view wx:if="{{location.length}}" class="del-info" bindtap="delLocation">
+        <icon class="del-icon" size="16" type="warn" color="#ccc"></icon>
+        <text class="del-txt">删除</text>
+      </view>
+    </view>
+  </view>
+  <cover-view wx:if="{{isShowPop}}" class="pop-welcome">
+    <cover-view class="modal"></cover-view>
+    <cover-view class="welcome-container">
+      <cover-view class="welcome-content">
+        <cover-image src="../../img/logo.jpg" class="logo"></cover-image>
+        <cover-view class="detail">
+          <cover-view class="tlt">高级打卡鸡👣</cover-view> 
+          <cover-view class="txt">用于记录您的每一个足迹，形成轨迹图，也可查看当前天气位置信息等</cover-view>
+        </cover-view>
+      </cover-view>
+      <button open-type="getUserInfo" class="welcome-btn" bindtap="hideWelcome" bindgetuserinfo="getUserInfo">立即开启</button>
+    </cover-view>
+  </cover-view>
+  <cover-view wx:if="{{isShowPoster}}" class="pop-poster">
+    <cover-view class="modal" bindtap="hidePoster"></cover-view>
+    <cover-view class="poster-container">
+      <cover-image class="poster" src="{{posterSrc}}" bindtap="savePoster"></cover-image>
+      <cover-view class="poster-txt" wx:if="{{posterSaveFlag}}">点击图片保存，分享给好友~</cover-view>
+      <cover-view class="poster-txt" wx:else>图片已保存，分享到朋友圈吧</cover-view>
+    </cover-view>
+  </cover-view>
+  <canvas canvas-id="popCanvas" class="canvas"></canvas>
+</view>

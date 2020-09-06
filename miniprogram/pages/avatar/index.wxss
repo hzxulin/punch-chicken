@@ -1,0 +1,201 @@
+.container {
+    flex-direction: row;
+    align-items: center;
+    padding: 40rpx 0 20rpx;
+    background: #dfdfdf;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.title {
+    font-size: 40rpx;
+    line-height: 46rpx;
+    text-align: center;
+    color: #333;
+}
+.desc {
+    margin-top: 10rpx;
+    font-size: 30rpx;
+    line-height: 36rpx;
+    text-align: center;
+    color: #666;
+}
+.desc .num {
+    display: inline-block;
+    background: #1aad19;
+    font-size: 36rpx;
+    line-height: 40rpx;
+    padding: 3rpx 5rpx;
+    color: #fff;
+    text-align: center;
+    margin: 0 8rpx 0 4rpx;
+}
+.avatar-area-container {
+    position: relative;
+    margin: 30rpx auto 0;
+    background: #fff;
+    display: block;
+    width: 400rpx;
+    height: 400rpx;
+    border-radius: 4rpx;
+    overflow: hidden;
+    padding: 30rpx;
+}
+.avatar-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.upload {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeebee;
+}
+.upload .upload-icon-r {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200rpx;
+    height: 4rpx;
+    transform: translate(-50%, -50%);
+    background: #c9c9c9;
+}
+.upload .upload-icon-c {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 200rpx;
+    width: 4rpx;
+    transform: translate(-50%, -50%);
+    background: #c9c9c9;
+}
+.avatar-result {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatar-result .avatar {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.icon-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.icon-area .cancel {
+    position: absolute;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+.icon-area .handle {
+    position: absolute;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+.icon-area .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed #eb0d01;
+}
+.operation {
+    margin-top: 40rpx;
+    text-align: center;
+    font-size: 0;
+}
+.btn-share {
+    display: inline-block;
+    vertical-align: middle;
+    width: 250rpx;
+    margin: 0 20rpx;
+}
+.btn-save {
+    display: inline-block;
+    vertical-align: middle;
+    width: 250rpx;
+    margin: 0 20rpx;
+}
+.recommend {
+    margin-top: 30rpx;
+    flex: 1;
+}
+.recommend-title {
+    font-size: 30rpx;
+    color: #666;
+    position: relative;
+    padding-left: 15rpx;
+}
+.title-line {
+    position: absolute;
+    left: 2rpx;
+    top: 50%;
+    width: 4rpx;
+    height: 36rpx;
+    background: #1aad19;
+    display: inline-block;
+    transform: translateY(-50%);
+}
+.recommend-list {
+    margin-top: 15rpx;
+    background: #f8f8f8;
+    font-size: 0;
+    padding: 10rpx 8rpx;
+}
+.item {
+    display: inline-block;
+    margin: 0 10rpx 10rpx;
+    width: 150rpx;
+    padding: 8rpx 8rpx 15rpx;
+    text-align: center;
+    background: #dfdfdf;
+}
+.item.active {
+    background: #1aad19;
+}
+.item.active .item-name { 
+    color: #fff;
+}
+.item .item-icon {
+    width: 150rpx;
+    height: 150rpx;
+    background: #fff;
+}
+.item .item-name {
+    margin-top: 10rpx;
+    font-size: 28rpx;
+    line-height: 32rpx;
+    color: #000;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.canvas {
+    position: absolute;
+    top: -9999px;
+    left: 0;
+    z-index: 2000;
+    width: 800px;
+    height: 800px;
+}

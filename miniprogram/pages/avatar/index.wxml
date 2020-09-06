@@ -1,0 +1,60 @@
+<view class="container">
+    <view class="title">一键制作专属头像</view>
+    <view class="desc">已有 <text class="num">{{avatarTimes}}</text>次使用</view>
+    <view class="avatar-area-container">
+        <view class="avatar-area">
+            <view class="avatar-result" wx:if="{{avatar}}">
+                <image src="{{avatar}}" class="avatar" bindtap="handleUpload"></image>
+                <view class="icon-area" 
+                    id="iconArea"
+                    wx:if="{{icon}}" 
+                    bindtouchstart="handleTouchStart"
+                    bindtouchmove="handleTouchMove"
+                    bindtouchend="handleTouchEnd"
+                >
+                    <image src="{{icon}}" 
+                        id="icon" 
+                        class="icon"
+                        style="top:{{iconCenterY-iconSize/2-1+'px'}};left:{{iconCenterX-iconSize/2-1+'px'}};transform:rotate({{rotate+'deg'}}) scale({{scale}})"
+                    ></image>
+                    <image
+                        src="../../img/icon-close.png" 
+                        class="cancel" 
+                        id="cancel" 
+                        bindtap="handleCancel"
+                        style="top:{{cancelCenterY-10-1+'px'}};left:{{cancelCenterX-10-1+'px'}}"
+                    ></image>
+                    <image 
+                        src="../../img/icon-scale.png"
+                        class="handle" 
+                        id="handle"
+                        style="top:{{handleCenterY-10-1+'px'}};left:{{handleCenterX-10-1+'px'}}"
+                    ></image>
+                </view>
+            </view>
+            <view class="upload" wx:else bindtap="handleUpload">
+                <view class="upload-icon-r"></view>
+                <view class="upload-icon-c"></view>
+            </view>
+        </view>
+    </view>
+    <view class="operation">
+        <button open-type="share" type="primary" class="btn-share">分享</button>
+        <button class="btn-save" type="default" bindtap="handleSave">保存</button>
+    </view>
+    <view class="recommend">
+        <view class="recommend-title"><view class="title-line"></view>推荐列表</view>
+        <scroll-view class="recommend-list" scroll-y="true" style="{{'height: ' + recommendHeight + 'px'}}">
+            <view wx:for="{{recommendList}}" wx:key="_id" class="item {{item._id == currentId ? 'active' : ''}}" bindtap="handleSelectIcon" data-id="{{item._id}}">
+                <image src="{{item.src}}" class="item-icon"></image>
+                <view class="item-name">{{item.name}}</view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+<canvas canvas-id="avatarCanvas" class="canvas"></canvas>
+<action-sheet visible="{{actionSheetVisible}}">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">使用微信头像</button>
+    <button bindtap="handlePickPic" data-source-type="album">使用本地相册</button>
+    <button bindtap="handlePickPic" data-source-type="camera">拍照</button>
+</action-sheet>

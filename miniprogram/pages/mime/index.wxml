@@ -1,0 +1,37 @@
+<view class="container" style="{{'padding-top:' + navBarHeight + 'px'}}">
+  <view class="userinfo">
+    <view class="userinfo-avatar" bindtap="handleAvatar">
+      <open-data type="userAvatarUrl" class="avatar"></open-data>
+    </view>
+    <open-data type="userNickName" class="userinfo-nickname"></open-data>
+  </view>
+  <view class="weather">
+    <view class="weather-line">
+      <text class="tlt">城市：</text><text class="desc">{{weatherData.currentCity}}</text>
+    </view>
+    <view class="weather-line">
+      <text class="tlt">PM2.5：</text><text class="desc">{{weatherData.pm25}}</text>
+    </view>
+    <view class="weather-line">
+      <text class="tlt">日期：</text><text class="desc">{{weatherData.date}}</text>
+    </view>
+    <view class="weather-line">
+      <text class="tlt">温度：</text><text class="desc">{{weatherData.temperature}}</text>
+    </view>
+    <view class="weather-line">
+      <text class="tlt">天气：</text><text class="desc">{{weatherData.weatherDesc}}</text>
+    </view>
+    <view class="weather-line">
+      <text class="tlt">风力：</text><text class="desc">{{weatherData.wind}}</text>
+    </view>
+  </view>
+  <view class="bmap">
+    <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" enable-traffic="true"></map>
+    <view class="bmap-line">
+      <text class="tlt">地址：</text><text class="desc">{{mapData.address}}</text>
+    </view>
+    <view class="bmap-line">
+      <text class="tlt">详情：</text><text class="desc">{{mapData.desc}}</text>
+    </view>
+  </view>
+</view>
