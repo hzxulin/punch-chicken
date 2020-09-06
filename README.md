@@ -17,31 +17,31 @@
 #### 首页
 首页，可以在地图看到自己所在的位置，并进行`打卡`，打卡后会生成分享图，便于进行朋友圈传播，也可以直接进行分享。
 
-<img src="./assets/index.png" style="width:260px;" />
+<img src="./assets/index.png" style="width:300px;" />
 
-<img src="./assets/punch-card.png" style="width:260px;" />
+<img src="./assets/punch-card.png" style="width:300px;" />
 
 #### 记录页
 
 `历史记录`页，可以看到自己以往所有的打点详情，并可以左滑删除对应记录
 
-<img src="./assets/history.png" style="width:260px;" />
+<img src="./assets/history.png" style="width:300px;" />
 
 #### 世界圈
 可以在`世界圈`看到各个用户的打卡情况，自身的打卡与其他用户做区分，同时为了保证用户的隐私，仅展示打卡时间和打卡地点。
 右上角还新增了榜单功能，可以进入到榜单页看到各个用户的打卡排行榜，争取多打卡展示到top10吧。
 
-<img src="./assets/world.png" style="width:260px;" />
+<img src="./assets/world.png" style="width:300px;" />
 
-<img src="./assets/top.png" style="width:260px;" />
+<img src="./assets/top.png" style="width:300px;" />
 
 #### 个人页
 展示一些基本用户信息，放置了`天气信息`，可以方便的查看天气情况
 点击头像有惊喜，现在流行的`头像制作`功能，已集成到打卡鸡中，头像使用了挺久，换个头像试试？
 
-<img src="./assets/mime.png" style="width:260px;" />
+<img src="./assets/mime.png" style="width:300px;" />
 
-<img src="./assets/avatar.png" style="width:260px;" />
+<img src="./assets/avatar.png" style="width:300px;" />
 
 ### License
 Apache License Version 2.0
